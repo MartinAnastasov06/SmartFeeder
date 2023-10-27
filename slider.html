@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+    <link rel="stylesheet" href="slider.css">
+    <title>SmartFeeder</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <!--Top menu -->
+        <div class="sidebar">
+           <!--profile image & text-->
+            <!--menu item-->
+             <div class="profile">
+                <img src="logo-1.jpg" alt="profile_picture">
+                <h3>SmartFeeder</h3>
+                <p>SmartHome Technologies </p>
+            </div>
+
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <span class="icon"><i class="fas fa-home"></i></span>
+                        <span class="item">Начало</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="slider.html" class="active">
+                        <span class="icon"><i class="fas fa-desktop"></i></span>
+                        <span class="item">Опции</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="statistics.html">
+                        <span class="icon"><i class="fas fa-chart-line"></i></span>
+                        <span class="item">Статистика</span>
+                    </a>
+                </li>
+             
+                
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-cog"></i></span>
+                        <span class="item">Настройки</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        <span class="icon"><i class="fas fa-address-book"></i></span>
+                        <span class="item">Контакти</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        </div>
+
+    </div>
+
+    <h1>Добави храна или вода</h1>
+
+    <div class="mu">
+
+      <div class="card">
+        <div class="circular--portrait"> <img src="granuli.png" /> </div>
+        <div class="circle">
+
+          <div class="bar">
+            <div class="container">
+        <input type="range" id="my-slider" min="0" max="100" value="50g" oninput="slider()">
+        <div id="slider-value">20</div>
+    </div>
+    <!-- Script -->
+
+    <script src="script.js"></script>
+          </div>
+
+          <div class="box"><span></span>
+
+          </div>
+        </div>
+        <div class="text"><button type="button">Добави храна</button></div>
+      </div>
+      <div class="card">
+        <div class="circular--portrait"> <img src="voda.png" /> </div>
+        <div class="circle">
+          <div class="bar">
+              <div class="container">
+        <input type="range" id="my-slider" min="0" max="100" value="50" oninput="slider()">
+        <div id="slider-value">15ml</div>
+    </div>
+    <!-- Script -->
+    <script src="script.js"></script>
+          </div>
+          <div class="box"><span></span></div>
+        </div>
+        <div class="text"><button type="button">Добави вода</button></div>
+
+      </div>
+
+      
+        
+    </div>
+      
+    
+  <script>
+    const mySlider = document.getElementById("my-slider");
+const sliderValue = document.getElementById("slider-value");
+function slider(){
+    valPercent = (mySlider.value / mySlider.max)*100;
+    mySlider.style.background = `linear-gradient(to right, #3264fe ${valPercent}%, #d5d5d5 ${valPercent}%)`;
+    sliderValue.textContent = mySlider.value;
+}
+slider();   
+
+  </script>
+</body>
+</html>
