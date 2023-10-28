@@ -118,7 +118,7 @@ body{
 h1{
     position: absolute; left: 550px; top: 50px; color: #fff;
 }
-button{
+#button{
     background-color: #003399;
     color: white;
     text-decoration: none;
@@ -129,12 +129,13 @@ button{
     transition: .4s;
     font-size: 15px;
 }
-button:hover{
+#button:hover{
     background-color: #0066ff;
     border: 2px solid black;
     cursor: pointer;
 }
 .circular--portrait { position: relative; width: 250px; height: 250px; overflow: hidden; border-radius: 50%; } .circular--portrait img { width: 100%; height: auto; }
+
 
 
 

@@ -1,8 +1,9 @@
-const mySlider = document.getElementById("my-slider");
-const sliderValue = document.getElementById("slider-value");
-function slider(){
-    valPercent = (mySlider.value / mySlider.max)*100;
-    mySlider.style.background = `linear-gradient(to right, #3264fe ${valPercent}%, #d5d5d5 ${valPercent}%)`;
-    sliderValue.textContent = mySlider.value;
-}
-slider();   
+// Извлекаме бутона и мястото, където ще се покаже съобщението
+const button = document.getElementById("myButton");
+const messageBox = document.getElementById("messageBox");
+
+// Добавяме слушател на събитието "click" към бутона
+button.addEventListener("click", function() {
+  // Показваме съобщение в div с id "messageBox"
+  messageBox.innerHTML = "Съобщението се появи!";
+});

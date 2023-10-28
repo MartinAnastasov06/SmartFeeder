@@ -87,7 +87,7 @@ html, body {
   justify-content: center;
   align-items: center;
   font-family: 'Roboto', sans-serif;
-  background: #efefef;
+  background: -webkit-linear-gradient(left, #000428, #004e92);
   overflow: hidden;
 }
 .panel {
